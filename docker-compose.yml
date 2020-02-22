@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    container_name: express-docker-ssl
+    restart: always
+    build: .
+    volumes:
+      - .:/usr/src/express-docker-ssl
+    working_dir: /usr/src/express-docker-ssl
+    ports:
+      - '80:5000'
